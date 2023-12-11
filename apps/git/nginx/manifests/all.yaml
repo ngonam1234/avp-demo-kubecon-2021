@@ -31,6 +31,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-nginx
+  annotations:
+    reloader.stakater.com/auto: "true"   # Tự động theo dõi thay đổi ConfigMap và Secrets
 spec:
   selector:
     matchLabels:
