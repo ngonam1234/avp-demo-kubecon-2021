@@ -26,7 +26,6 @@ metadata:
     avp.kubernetes.io/path: "secret/data/my-nginx"
 stringData:  
   MY_SECRET: <password>
-  MY_SECRET2: <password2>
 ---
 apiVersion: apps/v1
 kind: Deployment
