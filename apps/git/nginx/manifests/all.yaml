@@ -21,7 +21,9 @@ kind: Secret
 metadata:
   name: my-nginx
   annotations:
-
+    vault.security.banzaicloud.io/vault-addr: "https://vault.vault-operator.svc.cluster.local:8200"
+    vault.security.banzaicloud.io/vault-tls-secret: "vault-tls"
+    vault.security.banzaicloud.io/vault-env-from-path: "secret/kv/gapo-work/values"
     # Our special annotation to tell AVP where the secrets are
     avp.kubernetes.io/path: "secret/data/my-nginx"
 stringData:  
